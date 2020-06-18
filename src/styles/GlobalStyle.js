@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-import { BreakpointsSize, breakAt } from "./Breakpoints";
+import { BreakpointsSizes, breakAt } from "./Breakpoints";
 const colorYellow = "#ffc107";
 
 const GlobalStyle = createGlobalStyle`
@@ -39,7 +39,7 @@ const GlobalStyle = createGlobalStyle`
   h5{font-size: 1.2rem; font-weight: 300;}
   h6{font-size: 1.1rem; font-weight: 600;}
 
-  ${breakAt(BreakpointsSize.lg)} {
+  ${breakAt(BreakpointsSizes.lg)} {
       h1{font-size: 3.75rem;}
       h2{font-size: 3.125rem;}
       h3{font-size: 2.5rem;}

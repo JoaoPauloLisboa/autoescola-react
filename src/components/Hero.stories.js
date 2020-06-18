@@ -1,24 +1,22 @@
 import React from "react";
+import { text } from "@storybook/addon-knobs";
 
-import Hero from "../components/Hero";
-import bgHero1 from "./assets/bg-hero-1.jpg";
-import bgHero2 from "./assets/bg-hero-2.jpg";
-import Heading from "../components/Heading";
+import Hero from "./Hero";
+import bgHero1 from "../stories/assets/bg-hero-1.jpg";
+import bgHero2 from "../stories/assets/bg-hero-2.jpg";
+import Heading from "./Heading";
 
 export default {
-  title: "Hero",
+  title: "Components|Hero",
   component: Hero,
 };
 
 export const usage = () => (
   <Hero image={bgHero1}>
     <Heading>
-      <h1>
-        Ganhe sua <strong>liberdade</strong>
-        <br /> para ir e vir
-      </h1>
+      <h1>{text("Title", "Ganhe sua liberdade para ir e vir")}</h1>
     </Heading>
-    <p>teste</p>
+    <p>{text("Text", "Teste")}</p>
   </Hero>
 );
 

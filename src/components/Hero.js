@@ -2,7 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 
-import { breakAt, BreakpointsSize } from "./Breakpoints";
+import { breakAt, BreakpointsSizes } from "styles/Breakpoints";
 
 const colorYellow = "#ffc107";
 
@@ -20,11 +20,11 @@ const Container = styled.div`
   width: 100%;
   padding: 0 15px;
 
-  ${breakAt(BreakpointsSize.sm)} {
+  ${breakAt(BreakpointsSizes.sm)} {
     padding: 0 30px;
   }
 
-  ${breakAt(BreakpointsSize.xl)} {
+  ${breakAt(BreakpointsSizes.xl)} {
     width: 1140px;
     margin: 0 auto;
     padding: 0;
@@ -50,7 +50,7 @@ const Content = styled.h1`
 `;
 
 const Hero = ({ image, children }) => (
-  <Root image={image}>
+  <Root image={image} data-testid="hero">
     <Container>
       <Content>{children}</Content>
     </Container>
